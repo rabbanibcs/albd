@@ -14,6 +14,8 @@ class LiveTV(models.Model):
     def __str__(self):
         return self.name
         
+    # form-input: https://www.youtube.com/watch?v=2e7u6vvIIt0
+    # in database save as: https://www.youtube.com/embed/2e7u6vvIIt0
     def save(self,*args,**kwargs):
         link=self.embedded_link
         link_part1,link_part2=link.split("?")
